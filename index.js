@@ -18,7 +18,10 @@ app.get('/ping', (req, res) => {
 
 
 app.use(bodyParser.json())
-app.use(cors()) // client means port 3000 se server 8080 ki request eccept karne ke liye cors libery lagati hai.
+app.use(cors({
+  origin: 'https://sam-deploy.netlify.app/'
+}));
+// client means port 3000 se server 8080 ki request eccept karne ke liye cors libery lagati hai.
 app.use('/auth', AuthRouter)
 app.use('/products', ProductRouter)
 
