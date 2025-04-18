@@ -2,11 +2,11 @@ const express = require("express")
 const app = express()
 const bodyParser = require('body-parser') //client se body means post- name , email, password fetch karne ke liye ye method ki jaroorat hoti hai (client se server ki rataf)
 const cors = require('cors')
-const AuthRouter = require('D:\\auth\\backend\\Routes\\AuthRouter.js')
-const ProductRouter = require('D:\\auth\\backend\\Routes\\ProductRouter.js')
+const AuthRouter = require('./Routes/AuthRouter');
+const ProductRouter = require('./Routes/ProductRouter');
 
-require('dotenv').config()
-require('D:\\auth\\backend\\Models\\db.js');
+require('dotenv').config();
+require('./Models/db');
 
 
 
